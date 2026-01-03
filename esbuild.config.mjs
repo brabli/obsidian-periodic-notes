@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import process from "node:process";
 import builtins from "builtin-modules";
 import { config } from "dotenv";
@@ -5,7 +6,9 @@ import esbuild from "esbuild";
 import sveltePlugin from "esbuild-svelte";
 import sveltePreprocess from "svelte-preprocess";
 
-import manifest from "./manifest.json";
+const manifestPath = "./manifest.json";
+const manifestContent = readFileSync(manifestPath, "utf-8");
+const manifest = JSON.parse(manifestContent);
 
 config();
 
