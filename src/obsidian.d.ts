@@ -16,14 +16,12 @@ declare module "obsidian" {
     on(
       name: "periodic-notes:settings-updated",
       callback: () => void,
-      /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-      ctx?: any
+      ctx?: unknown
     ): EventRef;
     on(
       name: "periodic-notes:resolve",
       callback: () => void,
-      /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-      ctx?: any
+      ctx?: unknown
     ): EventRef;
   }
 
@@ -85,7 +83,7 @@ declare module "obsidian" {
   interface Vault {
     config: Record<string, unknown>;
     getConfig<T extends keyof VaultSettings>(setting: T): VaultSettings[T];
-    setConfig<T extends keyof VaultSettings>(setting: T, value: any): void;
+    setConfig<T extends keyof VaultSettings>(setting: T, value: unknown): void;
   }
 
   export interface PluginInstance {
