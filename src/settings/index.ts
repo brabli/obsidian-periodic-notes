@@ -25,6 +25,8 @@ export interface ISettings {
 
   activeCalendarSet: string;
   calendarSets: CalendarSet[];
+  localeOverride: string,
+  weekStart: IWeekStartOption,
 
   enableTimelineComplication: boolean;
 }
