@@ -1,7 +1,7 @@
+import process from "node:process";
+import builtins from "builtin-modules";
 import { config } from "dotenv";
 import esbuild from "esbuild";
-import process from "process";
-import builtins from "builtin-modules";
 import sveltePlugin from "esbuild-svelte";
 import sveltePreprocess from "svelte-preprocess";
 
