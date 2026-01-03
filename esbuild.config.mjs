@@ -33,7 +33,7 @@ esbuild
     banner: {
       js: banner,
     },
-    minify: prod ? true : false,
+    minify: !!prod,
     entryPoints: ["src/main.ts", "src/styles.css"],
     bundle: true,
     external: [
